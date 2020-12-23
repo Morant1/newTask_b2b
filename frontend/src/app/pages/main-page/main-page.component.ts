@@ -13,9 +13,9 @@ export class MainPageComponent implements OnInit {
   users: User[] = [];
   loggedInUser = null;
   userMsg = false;
-  
+
   subscription: Subscription
-  constructor(private httpService: HttpServiceService,private router: Router) { }
+  constructor(private httpService: HttpServiceService, private router: Router) { }
 
   ngOnInit(): void {
     this.httpService.getUsers()
@@ -33,7 +33,7 @@ export class MainPageComponent implements OnInit {
   }
 
   async onLoginHandler(loginCreds) {
- 
+
     const loggedInUser = await this.httpService.login(loginCreds);
     loggedInUser.subscribe(
       loggedInUser => {
@@ -43,16 +43,13 @@ export class MainPageComponent implements OnInit {
       err => {
         this.loggedInUser = err;
         this.userMsg = true;
-      },
-
-
+      }
 
     );
 
-    
   }
-  
-  onRedirect():void {
+
+  onRedirect(): void {
     this.router.navigateByUrl('/info');
   }
 

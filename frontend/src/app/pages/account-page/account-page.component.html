@@ -1,10 +1,10 @@
 <div *ngIf="loggedInUser" class="account-container">
-    <div class="arrow back" (click)="goBack()">
-        <i class="fas fa-arrow-right"></i>
-        <span>חזור</span>
-    </div>
 
     <div class="wrapper">
+        <div class="arrow back" (click)="goBack()">
+            <i class="fas fa-arrow-right"></i>
+            <span>חזור</span>
+        </div>
 
     <h2> אנא מלאו את פרטי החשבונות של חברת<span> &quot;{{loggedInUser.userInfo.companyname}}&quot;</span></h2>
     <h3>{{loggedInUser.userInfo.account}} : ח.פ</h3>
