@@ -1,0 +1,187 @@
+.account-container {
+    background-image: url("../../../assets/imgs/Background2.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+
+    .arrow {
+        cursor: pointer;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &.back {
+            right: 55px;
+            top: 60px;
+        }
+
+        &.forward {
+            bottom: 30px;
+            left: 250px;
+
+            i {
+                font-size: 30px;
+                padding: 7px 8px;
+                border: 3px solid rgb(2, 2, 37);
+                color: rgb(2, 2, 37);
+            }
+        }
+
+        i {
+            padding: 5px 6px;
+            font-size: 25px;
+            border: 2px solid black;
+            border-radius: 50%;
+        }
+
+        span {
+            font-size: 12px;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+    }
+
+    .wrapper {
+        justify-content: center;
+        position: absolute;
+        right: 55px;
+        top: 23%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        .add {
+            background: none;
+            border: none;
+            font-size: 15px;
+            margin: 0 0 10px 10px;
+            cursor: pointer;
+            font-family: system-ui;
+            display: flex;
+            font-weight: 700;
+            justify-content: center;
+            align-items: center;
+
+            i {
+                margin-left: 5px;
+                font-size: 10px;
+            }
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            width: 26ch;
+            text-align: right;
+            direction: rtl;
+            margin: 0 0 10px 0;
+        }
+
+        h3 {
+            margin: 0 0 25px 0;
+            letter-spacing: -1px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        select {
+            direction: rtl;
+            border: none;
+            font-size: 18px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .sub-input {
+            border-radius: 5px;
+            display: flex;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0 0 10px 10px;
+            flex-direction: row-reverse;
+            width: max-content;
+            background-color: white;
+            border: 1.5px solid #9df9c9;
+            align-items: center;
+
+            label {
+                margin-left: 5px;
+                border-left: 1.5px solid #9df9c9;
+                padding: 5px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .account-container .wrapper h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .account-container .wrapper h2 {
+        font-size: 1.5rem;
+    }
+
+    .account-container .arrow.forward {
+        bottom: 0;
+        left: 10%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .account-container .wrapper {
+        right: 15px;
+    }
+    .account-container .wrapper .sub-input label {
+        font-size: 15px;
+    }
+
+    .account-container .wrapper select {
+        font-size: 15px;
+    }
+
+    .account-container .arrow.back {
+        right: 15px;
+        top: 60px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .account-container .wrapper .sub-input label {
+        font-size: 12px;
+    }
+
+    .account-container .wrapper select {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .account-container .wrapper h2 {
+        font-size: 1.2rem;
+    }
+
+    .account-container .wrapper h3 {
+        font-size: 12px;
+    }
+
+    .account-container .arrow i {
+        font-size: 20px;
+    }
+
+    .account-container .arrow.forward i {
+        font-size: 25px;
+    }
+}

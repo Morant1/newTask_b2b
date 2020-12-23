@@ -1,0 +1,114 @@
+.input {
+    display: flex;
+    flex-direction: row-reverse;
+
+    button {
+        background: none;
+        border: none;
+        font-size: 15px;
+        margin: 0 0 10px 10px;
+        cursor: pointer;
+        font-family: system-ui;
+        font-weight: 700;
+    }
+
+    select,
+    input {
+        direction: rtl;
+        padding: 5px;
+        border: none;
+        font-size: 18px;
+        outline: none;
+        background: white;
+    }
+
+    select {
+        cursor: pointer;
+    }
+
+    input {
+        width: 70px;
+        background-color: transparent;
+    }
+
+    .sub-input {
+        border-radius: 5px;
+        display: flex;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0 0 10px 10px;
+        flex-direction: row-reverse;
+        background-color: white;
+        padding-left: 10px;
+        border: 1.5px solid #9df9c9;
+        min-width: 150px;
+
+        label {
+            margin-left: 5px;
+            border-left: 1.5px solid #9df9c9;
+            padding: 5px 5px 5px 15px;
+            font-weight: 600;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .input .sub-input {
+        min-width: unset;
+        margin: 0 0 10px 5px;
+        padding-left: 15px;
+    }
+    .input .sub-input label {
+        font-size: 15px;
+    }
+
+    .input select {
+        padding: 0;
+        font-size: 16px;
+    }
+
+    .input button {
+        font-size: 12px;
+        margin: 0 0 10px 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .input input {
+        width: 50px;
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .input .sub-input {
+        padding-left: 2px;
+    }
+    .input .sub-input label {
+        padding: 2px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+    }
+
+    .input select {
+        padding: 0;
+        font-size: 13px;
+    }
+
+    .input input {
+        width: 45px;
+    }
+
+    .input button {
+        font-size: 10px;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .input input {
+        width: 25px;
+    }
+}
