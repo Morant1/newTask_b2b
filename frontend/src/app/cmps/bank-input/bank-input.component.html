@@ -16,11 +16,11 @@
 
     <div class="sub-input">
         <label for="branch-{{idx}}">סניף</label>
-        <input id="branch-{{idx}}" type="text" [(ngModel)]="bankInfo.branch" (change)="onRetrive.emit(bankInfo)" />
+        <input id="branch-{{idx}}" type="text" [(ngModel)]="bankInfo.branch" (change)="onRetrive.emit(bankInfo)" >
     </div>
     <div class="sub-input">
         <label for="account-{{idx}}">חשבון</label>
-        <input id="account-{{idx}}" type="text" [(ngModel)]="bankInfo.account" (change)="onRetrive.emit(bankInfo)" />
+        <input id="account-{{idx}}" type="text" [(ngModel)]="bankInfo.account" (change)="onRetrive.emit(bankInfo)" >
     </div>
     <button (click)="onRemove.emit({id:bankInfo.id,idx:idx})">הסר -</button>
 </div>
